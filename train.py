@@ -54,7 +54,7 @@ def train(args):
 
         for b in range(args.num_batches):
             t1 = time.time()
-            u_i, u_j, label, w = data_loader.fetch_next_batch(batch_size=args.batch_size, K=args.K)
+            u_i, u_j, label = data_loader.fetch_next_batch(batch_size=args.batch_size, K=args.K)
             feed_dict = {model.u_i: u_i, model.u_j: u_j, model.label: label}
             t2 = time.time()
             sampling_time += t2 - t1
