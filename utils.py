@@ -64,7 +64,7 @@ class DataUtils:
             for i in range(K):
                 while True:
                     negative_node = self.node_sampling.sampling()
-                    if not self.g.has_edge(self.node_index_reversed[negative_node], self.node_index_reversed[edge[1]]):
+                    if not self.g.has_edge(self.node_index_reversed[negative_node], self.node_index_reversed[edge[0]]):
                         break
                 u_i.append(edge[0])
                 u_j.append(negative_node)
